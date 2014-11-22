@@ -131,6 +131,10 @@ a:hover,a:focus{color:#5173bd;}
 	-o-animation:fadein 2s;
 	}
 
+.masthead .admin{
+	text-align: left;
+}
+
 .loading *{
 	-webkit-animation:none!important;
 	-moz-animation:none!important;

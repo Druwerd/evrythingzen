@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :text, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :source %><br>
-    <%= f.text_field :source %>
+    <%= f.text_field :source, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :source_link %><br>
-    <%= f.text_field :source_link %>
+    <%= f.text_field :source_link, {:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :zen_link %><br>
-    <%= f.text_field :zen_link %>
+    <%= f.text_field :zen_link, {:class => "form-control"} %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions form-group">
+    <%= f.submit nil,{:class => "btn btn-default"}%>
   </div>
 <% end %>
