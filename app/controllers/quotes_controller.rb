@@ -5,7 +5,12 @@ class QuotesController < ApplicationController
   # GET /quotes.json
   def index
     @quote = Quote.picker
-    render :show
+    if @quote
+      render :show
+    else
+      @quote = Quote.new
+      render :new
+    end
   end
 
   def list
