@@ -1,0 +1,17 @@
+<div class="preloader"></div>
+  
+    <! -- ******************** MASTHEAD SECTION ******************** -->  
+  <main id="top" class="masthead" role="main">
+    <div class="container">
+ 
+      <h1><strong>"<%= @quote.text %>"</strong> <br>
+      - <%= @quote.source %></h1>
+
+      <p>
+      <%= link_to('SOURCE', @quote.source_link, {:class => "scrollto"}) unless @quote.source_link.to_s.empty? %>
+      <%= link_to('ZEN', @quote.zen_link, {:class => "scrollto"}) unless @quote.zen_link.to_s.empty? %>
+      <%= link_to('PERMALINK', @quote) %>
+      </p>
+ 
+    </div><! --/container -->
+  </main><! --/main -->

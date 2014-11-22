@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyText
+  source: MyString
+  music_link: MyString
+  zen_link: MyString
+
+two:
+  text: MyText
+  source: MyString
+  music_link: MyString
+  zen_link: MyString
