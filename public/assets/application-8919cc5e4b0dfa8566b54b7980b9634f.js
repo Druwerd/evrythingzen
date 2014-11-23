@@ -3222,7 +3222,7 @@ else var s=p/(2*Math.PI)*Math.asin(c/a);if(t<1)return-.5*(a*Math.pow(2,10*(t-=1)
     };
 
     GoogleAnalytics.analyticsId = function() {
-      return '123432';
+      return 'UA-30616162-3';
     };
 
     return GoogleAnalytics;
