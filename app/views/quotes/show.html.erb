@@ -12,6 +12,8 @@
       <%= link_to('ZEN', @quote.zen_link, {:class => "scrollto"}) unless @quote.zen_link.to_s.empty? %>
       <%= link_to('PERMALINK', @quote) %>
       </p>
+
+      <%= button_to('MORE ZEN', root_url, {:method => :get, :class => "btn btn-success btn-lg"}) %>
  
     </div><! --/container -->
   </main><! --/main -->
