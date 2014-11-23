@@ -7,13 +7,19 @@
       <h1><strong>"<%= @quote.text %>"</strong> <br>
       - <%= @quote.source %></h1>
 
-      <p>
-      <%= link_to('SOURCE', @quote.source_link, {:class => "scrollto"}) unless @quote.source_link.to_s.empty? %>
-      <%= link_to('ZEN', @quote.zen_link, {:class => "scrollto"}) unless @quote.zen_link.to_s.empty? %>
-      <%= link_to('PERMALINK', @quote) %>
-      </p>
+      <div class="action">
+        <%= button_to('MORE ZEN', root_url, {:method => :get, :class => "btn btn-success btn-lg"}) %>
+      </div>
 
-      <%= button_to('MORE ZEN', root_url, {:method => :get, :class => "btn btn-success btn-lg"}) %>
+      <div class="links">
+        <p>
+          <%= link_to('SOURCE', @quote.source_link, {:class => "scrollto"}) unless @quote.source_link.to_s.empty? %>
+          <%= link_to('ZEN', @quote.zen_link, {:class => "scrollto"}) unless @quote.zen_link.to_s.empty? %>
+          <%= link_to('PERMALINK', @quote) %>
+        </p>
+      </div>
+
+
  
     </div><! --/container -->
   </main><! --/main -->
