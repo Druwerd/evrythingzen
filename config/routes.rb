@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, :only => [:index, :edit, :show, :update]
 
   root 'quotes#index'
-  get 'admin' => 'quotes#list'
+
+  scope path: "/admin", as: 'admin' do
+    get 'quotes' => 'quotes#list'
+    get 'users' => 'users#index'
+  end
+  
   get 'quotes/list' => 'quotes#list'
   resources :quotes
 
