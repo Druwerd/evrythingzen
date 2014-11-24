@@ -4,6 +4,18 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
+  def admin_only
+    unless current_user.admin?
+      redirect_to root_url, :alert => "Access denied."
+    end
+  end
+
+  def admin_or_contributor
+    unless current_user.admin? || current_user.contributor?
+      redirect_to root_url, :alert => "Access denied."
+    end
+  end
+
   def login_required
     redirect_to root_url unless current_user
   end
