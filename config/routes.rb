@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+
   root 'quotes#index'
   get 'admin' => 'quotes#list'
   get 'quotes/list' => 'quotes#list'
