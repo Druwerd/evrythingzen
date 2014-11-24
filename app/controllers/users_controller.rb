@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :login_required
+  before_action :login_required, :admin_only
 
   # GET /users
   # GET /users.json
@@ -42,6 +42,12 @@ class UsersController < ApplicationController
   end
 
   private
+    def admin_only
+      unless current_user.admin?
+        redirect_to root_url, :alert => "Access denied."
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
