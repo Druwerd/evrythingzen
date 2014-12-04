@@ -13,7 +13,7 @@
 
       <div class="links">
         <p>
-          <%= link_to('SOURCE', @quote.source_link, {:class => "scrollto"}) unless @quote.source_link.to_s.empty? %>
+          <%= link_to('SOURCE', @quote.source_link, {:class => "scrollto", :target => "new window"}) unless @quote.source_link.to_s.empty? %>
           <%= link_to('ZEN', @quote.zen_link, {:class => "scrollto"}) unless @quote.zen_link.to_s.empty? %>
           <%= link_to('PERMALINK', @quote) %>
         </p>

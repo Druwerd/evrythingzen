@@ -3,11 +3,11 @@
 one:
   text: MyText
   source: MyString
-  music_link: MyString
+  source_link: MyString
   zen_link: MyString
 
 two:
   text: MyText
   source: MyString
-  music_link: MyString
+  source_link: MyString
   zen_link: MyString

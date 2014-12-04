@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, :only => [:index, :edit, :show, :update]
+  resources :users, :only => [:index, :edit, :show, :update, :destroy]
 
   root 'quotes#index'
 
