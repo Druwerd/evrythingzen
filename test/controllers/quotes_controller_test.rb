@@ -2,13 +2,15 @@ require 'test_helper'
 
 class QuotesControllerTest < ActionController::TestCase
   setup do
+    @user = users(:contributor)
     @quote = quotes(:one)
+    login(@user)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:quotes)
+    assert_not_nil assigns(:quote)
   end
 
   test "should get new" do

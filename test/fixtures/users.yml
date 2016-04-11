@@ -13,3 +13,19 @@ two:
   name: MyString
   oauth_token: MyString
   oauth_expires_at: 2014-11-21 19:09:10
+
+admin:
+  provider: Facebook
+  uid: 123
+  name: FooBar
+  role: <%= User.roles.fetch(:admin) %>
+  oauth_token: "fake-oauth-token"
+  oauth_expires_at: <%= Time.now + 1.day %>
+
+contributor:
+  provider: Facebook
+  uid: 456
+  name: FooBaz
+  role: <%= User.roles.fetch(:contributor) %>
+  oauth_token: "fake-oauth-token"
+  oauth_expires_at: <%= Time.now + 1.day %>
